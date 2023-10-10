@@ -18,7 +18,7 @@ else
 
     concatenated_folders=$(joinByChar $'\n' ${folders[@]})
 
-    selected=$(echo "${concatenated_folders}" | fzf)
+    selected=$(echo "${concatenated_folders}" | fzf --cycle --header="Project to create a session for" --no-scrollbar -e)
 fi
 
 if [[ -z $selected ]]; then
